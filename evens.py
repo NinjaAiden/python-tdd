@@ -6,12 +6,11 @@ def even_number_of_evens(numbers):
     for number in numbers:
         if number % 2 == 0:
             evens += 1
-            
     
-    if evens % 2 == 0:
-        return True
-    else:
+    if evens == 0:
         return False
+    else:
+        return evens % 2 ==0
 
 assert even_number_of_evens([]) == False, "No numbers"
 assert even_number_of_evens([2]) == False, "One number"
