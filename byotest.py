@@ -1,6 +1,3 @@
-def number_of_evens(numbers):
-    return 0
-
 def test_are_equal(actual, expected):
     assert expected == actual, "Expected {0}, got {1}".format(expected, actual)
 
@@ -17,7 +14,7 @@ def test_between(lower, upper, actual):
     assert lower <= actual <= upper, "{1} is not between {0} and {2}".format(lower, actual, upper)
     
 # test fails    
-#test_are_equal(number_of_evens([1, 2, 3, 4, 5]), 2)
+#test_are_equal(8, 9)
 
 # test passes
 test_are_equal(8, 8)
@@ -45,5 +42,3 @@ test_not_in([1, 2, 3, 4, 5, 6], 9)
 
 # test pases
 test_between(0, 15, 8)
-
-print("tests passed")
