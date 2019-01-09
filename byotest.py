@@ -12,6 +12,9 @@ def test_is_in(collection, item):
 
 def test_not_in(collection, item):
     assert item not in collection, "{0} contains {1}".format(collection, item)
+
+def test_between(lower, upper, actual):
+    assert lower <= actual <= upper, "{1} is not between {0} and {2}".format(lower, actual, upper)
     
 # test fails    
 #test_are_equal(number_of_evens([1, 2, 3, 4, 5]), 2)
@@ -36,5 +39,11 @@ test_is_in([1, 2, 3, 4, 5], 3)
 
 # test passes
 test_not_in([1, 2, 3, 4, 5, 6], 9)
+
+# test fails
+#test_between(0, 8, 15)
+
+# test pases
+test_between(0, 15, 8)
 
 print("tests passed")
